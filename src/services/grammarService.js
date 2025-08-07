@@ -57,12 +57,11 @@ exports.evaluateText = async (text) => {
     model: AI_MODEL,
     prompt,
     stream: false,
+    think: false,
   };
   const response = await axios.post(AI_URL, params, { timeout: 120000 });
   const data = response.data?.response || response.data;
-  const result = JSON.parse(
-    data.replace(/<think>[\s\S]*?<\/think>/gi, "").trim()
-  );
+  const result = JSON.parse(data);
 
   return result;
 };
