@@ -1,9 +1,9 @@
 // Ollama AI model settings
-const AI_MODEL = "qwen3";
-const AI_URL = process.env.AI_URL || "http://localhost:11434/api/generate";
+const AI_MODEL = process.env.AI_MODEL;
+const AI_URL = process.env.AI_URL;
 
 // Server port configuration
-const API_PORT = process.env.PORT || 5000;
+const API_PORT = process.env.PORT;
 
 // API endpoint URLs
 const BASE_URL_V1 = "/api/v1";
