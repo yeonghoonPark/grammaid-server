@@ -25,30 +25,30 @@ exports.evaluateText = async (text) => {
     - Respond ONLY in JSON format, with the following structure:
     {
       "isGrammaticallyCorrect": (true or false),
-      "feedback": (string, your brief explanation in Korean),
-      "recommendedSentences": [three different English sentences with same meaning]
+      "feedback": (string, your detailed and precise explanation in Korean, including grammar, naturalness, and expression appropriateness),
+      "recommendedSentences": [three different English sentences with the same meaning, corrected if original sentence is incorrect]
     }
 
     - If the text is grammatically correct and natural,
-      set "isGrammaticallyCorrect" to true and provide an explanation in Korean as "feedback", including what the sentence means.
+      set "isGrammaticallyCorrect" to true and provide a detailed explanation in Korean as "feedback", including what the sentence means and why it is correct.
       Also, provide three alternative English sentences with the same meaning in the "recommendedSentences" array.
 
     - If not,
-      set "isGrammaticallyCorrect" to false, briefly explain in Korean why it is wrong as "feedback".
-      The "recommendedSentences" array can be omitted or left empty in that case.
+      set "isGrammaticallyCorrect" to false, provide a detailed explanation in Korean as "feedback" explaining exactly why it is incorrect, including grammar mistakes, awkwardness, or unnatural expressions.
+      Provide three corrected English sentences with the same meaning in the "recommendedSentences" array.
 
     - Do not include any thinking process. Just provide the answer directly.
-    
+
     - All explanations ("feedback") must be in Korean.
 
     For example:
     {
       "isGrammaticallyCorrect": true,
-      "feedback": "문장이 문법적으로 정확하고 자연스럽습니다. ~~~",
+      "feedback": "-----. ----- ... ----- ... -----.",
       "recommendedSentences": [
-        "~~~",
-        "~~~",
-        "~~~"
+        "...",
+        "...",
+        "..."
       ]
     }
   `;
