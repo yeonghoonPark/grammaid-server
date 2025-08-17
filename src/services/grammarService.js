@@ -26,16 +26,16 @@ exports.evaluateText = async (text) => {
     {
       "isGrammaticallyCorrect": (true or false),
       "feedback": (string, your detailed and precise explanation in Korean, including grammar, naturalness, and expression appropriateness),
-      "recommendedSentences": [between three and six different English sentences with the same meaning, corrected if original sentence is incorrect]
+      "recommendedSentences": [between three and five different English sentences with the same meaning, corrected if original sentence is incorrect]
     }
 
     - If the text is grammatically correct and natural,
       set "isGrammaticallyCorrect" to true and provide a detailed explanation in Korean as "feedback", including what the sentence means and why it is correct.
-      Also, provide between three and six different English sentences with the same meaning in the "recommendedSentences" array.
+      Also, provide between three and five different English sentences with the same meaning in the "recommendedSentences" array.
 
     - If not,
       set "isGrammaticallyCorrect" to false, provide a detailed explanation in Korean as "feedback" explaining exactly why it is incorrect, including grammar mistakes, awkwardness, or unnatural expressions.
-      Provide between three and six different corrected English sentences with the same meaning in the "recommendedSentences" array.
+      Provide between three and five different corrected English sentences with the same meaning in the "recommendedSentences" array.
 
     - Do not include any thinking process. Just provide the answer directly.
 
